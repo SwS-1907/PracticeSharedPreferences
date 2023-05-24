@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 //        getPreferences(MODE_PRIVATE)
 
 
-        // for get the file name
+        // for set the file name
 //        getSharedPreferences("names", MODE_PRIVATE)
 
         var shared = PreferenceManager.getDefaultSharedPreferences(this)
@@ -32,6 +32,16 @@ class MainActivity : AppCompatActivity() {
         b.get.setOnClickListener {
             b.txt.text = shared.getString("name","Empty").toString()
         }
+
+        /*
+        there is a new wa to stored a values in the shered file
+        the nes technology named dataStore
+
+        Jetpack DataStore is a data storage solution that allows you to store key-value pairs or typed objects with protocol buffers. DataStore uses Kotlin coroutines and Flow to store data asynchronously, consistently, and transactionally.
+
+If you're currently using SharedPreferences to store data, consider migrating to DataStore instead.
+        */
+
 
     }
 }
